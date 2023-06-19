@@ -14,7 +14,7 @@ namespace MobileWorld.Application.AutoMapper
         public ViewModelToDomainMappingProfile()
         {
             CreateMap<OrderViewModel, OrderMap>();
-                //.ForMember(dest => dest.AddressId, opt => opt.MapFrom(map => map.Address.Id));
+                
         }
     }
 }

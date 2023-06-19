@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
 using MobileWorld.Infra.Data.Mapping;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace MobileWorld.Infra.Data.Context
 {
+
     public class MobileWorldDbContext : DbContext
     {
         public MobileWorldDbContext(DbContextOptions<MobileWorldDbContext> options) :

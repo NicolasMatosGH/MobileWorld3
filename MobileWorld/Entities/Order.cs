@@ -24,7 +24,7 @@ namespace MobileWorld.Domain.Entities
         private readonly List<OrderItem> _orderItems;
         public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
-        // EF Rel.
+ 
         public Address Address { get; private set; }
         public Voucher Voucher { get; private set; }
 
