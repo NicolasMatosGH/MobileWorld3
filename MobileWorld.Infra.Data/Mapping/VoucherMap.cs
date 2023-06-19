@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace MobileWorld.Infra.Data.Mapping
 {
-    public class VoucherMap : EntityTypeConfiguration<Voucher>
+    public class VoucherMap : IEntityTypeConfiguration<Voucher>
     {
         public void Configure(EntityTypeBuilder<Voucher> builder)
         {

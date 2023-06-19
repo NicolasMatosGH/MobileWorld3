@@ -3,7 +3,7 @@ using MobileWorld.Application.Interfaces;
 using MobileWorld.Application.ViewModel;
 using MobileWorld.Core.Enums;
 
-namespace MobileWorld.API.Controllers
+namespace MobileWorld.API.Controllers.V1
 {
     [ApiController]
     [Route("api/v1/order")]
