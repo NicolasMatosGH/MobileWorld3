@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MobileWorld.Core\MobileWorld.Core.csproj" />
+    <ProjectReference Include="..\MobileWorld.Infra.Data\MobileWorld.Infra.Data.csproj" />
+    <ProjectReference Include="..\MobileWorld\MobileWorld.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
