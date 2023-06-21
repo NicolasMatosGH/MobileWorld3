@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MobileWorld.Infra.Data.Context;
 
@@ -11,9 +12,11 @@ using MobileWorld.Infra.Data.Context;
 namespace MobileWorld.Infra.Data.Migrations
 {
     [DbContext(typeof(MobileWorldDbContext))]
-    partial class MobileWorldDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230621034510_FixingPhoneNumber")]
+    partial class FixingPhoneNumber
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

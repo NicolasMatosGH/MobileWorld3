@@ -50,6 +50,7 @@ namespace MobileWorld.API.Configuration
             services.AddScoped<IProductAppService, ProductAppService>();
             services.AddScoped<IVoucherAppService, VoucherAppService>();
             services.AddScoped<IOrderAppService, OrderAppService>();
+            services.AddScoped<IClientAppService, ClientAppService>();
         }
     }
 }

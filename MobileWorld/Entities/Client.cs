@@ -20,7 +20,8 @@ namespace MobileWorld.Domain.Entities
             Cpf cpf,
             bool active,
             PhoneNumber phoneNumber,
-            string password)
+            string password,
+            Guid addressId)
         {
             Name = name;
             Email = email.Address;
@@ -28,6 +29,7 @@ namespace MobileWorld.Domain.Entities
             Active = active;
             PhoneNumber = phoneNumber.Number;
             Password = password;
+            AddressId = addressId;
         }
 
         public string Name { get; private set; }

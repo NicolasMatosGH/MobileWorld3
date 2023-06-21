@@ -10,6 +10,8 @@ namespace MobileWorld.Application.ViewModel
         [Required(ErrorMessage = "O campo E-mail é obrigatório")]
         [RegularExpression(".+\\@.+\\..+", ErrorMessage = "Informe um email válido...")]
         public string Email { get; set; }
+        public string Password { get; set; }
+        public string PhoneNumber { get; set; }
         public string Cpf { get; set; }
         public bool Active { get; set; }
         public AddressViewModel Address { get; set; }

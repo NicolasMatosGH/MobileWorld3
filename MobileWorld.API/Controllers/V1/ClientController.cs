@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using MobileWorld.Application.Interfaces;
 using MobileWorld.Application.ViewModel;
 
-namespace DevGames.API.Controllers.V1
+namespace MobileWorld.API.Controllers.V1
 {
     [ApiController]
     [Route("api/v1/client")]

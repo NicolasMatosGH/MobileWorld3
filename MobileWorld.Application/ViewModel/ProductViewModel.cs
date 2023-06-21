@@ -15,7 +15,7 @@ namespace MobileWorld.Application.ViewModel
         [Required(ErrorMessage = "O campo Modelo é Obrigatório")]
         public string Model { get; set; }
         [Required(ErrorMessage = "O campo Nome é obrigatório")]
-        public string Title { get; set; }
+        
         public string Name { get; set; }
         public string Description { get; set; }
         public bool Active { get; set; }

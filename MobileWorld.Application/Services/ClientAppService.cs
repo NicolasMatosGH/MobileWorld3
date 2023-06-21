@@ -2,6 +2,7 @@
 using MediatR;
 using MobileWorld.Application.Interfaces;
 using MobileWorld.Application.ViewModel;
+using MobileWorld.Core.DomainObjects;
 using MobileWorld.Domain.Entities;
 using MobileWorld.Domain.Interfaces;
 using MobileWorld.Domain.Shared.Transaction;
@@ -25,13 +26,18 @@ namespace MobileWorld.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<ClientViewModel> AddAsync(ClientViewModel viewModel)
+        public async Task<Client> AddAsync(ClientViewModel viewModel)
         {
-            Client domain = _mapper.Map<Client>(viewModel);
+            var phoneNumber = new PhoneNumber(viewModel.PhoneNumber);
+            var cpf = new Cpf(viewModel.Cpf);
+            var email = new Email(viewModel.Email);
+            var client = new Client(viewModel.Name,email,cpf,true,phoneNumber,viewModel.Password,viewModel.Address.Id);
+
+            Client domain = _mapper.Map<Client>(client);
             domain = await _repository.AddAsync(domain);
             Commit();
 
-            ClientViewModel viewModelReturn = _mapper.Map<ClientViewModel>(domain);
+            Client viewModelReturn = _mapper.Map<Client>(domain);
             return viewModelReturn;
         }
 

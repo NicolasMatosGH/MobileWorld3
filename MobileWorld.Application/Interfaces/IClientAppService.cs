@@ -11,7 +11,7 @@ namespace MobileWorld.Application.Interfaces
 {
     public interface IClientAppService
     {
-        Task<ClientViewModel> AddAsync(ClientViewModel client);
+        Task<Client> AddAsync(ClientViewModel client);
         ClientViewModel Update(ClientViewModel client);
 
         void Remove(Guid id);
